@@ -18,6 +18,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="modernizr.custom.05819.js"></script>
     <script>
+        function buying() {
+            alert("WARNING!! YOU BOUGHT THE PROPERTY AND AGREE TO NO REFUNDS!!");
+        }
         function purchased() {
             var img = document.createElement('img');
             img.src = "purchased.png";
@@ -171,7 +174,7 @@
                 <label for="cscBox">CSC</label>
                 <input type="text" id="cscBox" required="required" maxlength="3" placeholder="nnn" pattern="^\d{3}$" />
             </div>
-            <button onclick="purchased()" type="button" class="btn btn-success" id="one">Purchase</button>
+            <button onclick="purchased(), buying()" type="button" class="btn btn-success" id="one">Purchase</button>
             <button onclick="cancel()" type="button" class="btn btn-danger">cancel</button>
         </form>
         <div id="purchasedComplete" class=text-center></div>
